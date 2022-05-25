@@ -3,7 +3,7 @@ const fs = require('fs');
 
 //сборка стилей
 async function mergeStyles() {
-  const output = fs.createWriteStream(path.join(__dirname, 'project-dist', 'bundle.css'));
+  const output = fs.createWriteStream(path.join(__dirname, 'project-dist', 'style.css'));
   const stylesFolder = path.join(__dirname, 'styles');
 
   fs.promises.readdir(stylesFolder).then(files => {
