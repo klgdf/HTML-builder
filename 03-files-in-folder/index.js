@@ -3,7 +3,7 @@ const fs = require('fs');
 const folderPath = path.join(__dirname, 'secret-folder');
 
 fs.readdir(folderPath, { withFileTypes: true }, (error, files) => {
-  if (error) throw Error;
+  if (error) throw error;
   files.forEach(file => {
     if (file.isFile()) {
       const fName = file.name.split('.')[0];
