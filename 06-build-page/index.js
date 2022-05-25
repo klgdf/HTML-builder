@@ -41,8 +41,8 @@ async function copyDirectory(startDir, endDir) {
 
 //сборка компонентов
 async function mergeComponents() {
-  const template = await fs.promises.readFile(path.join(__dirname, 'template.html'));
-  const HTML = template.toString();
+  let template = await fs.promises.readFile(path.join(__dirname, 'template.html'));
+  let HTML = template.toString();
   const componentsPath = path.join(__dirname, 'components');
   const components = await fs.promises.readdir(componentsPath);
   const buildFilePath = path.join(__dirname, 'project-dist', 'index.html');
