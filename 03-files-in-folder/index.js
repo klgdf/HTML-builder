@@ -9,7 +9,7 @@ fs.readdir(folderPath, { withFileTypes: true }, (error, files) => {
       const fName = file.name.split('.')[0];
       const fExt = file.name.split('.')[1];
 
-      fs.stat(path.join(folderPath, file.name), (err, stats) => {
+      fs.stat(path.join(folderPath, file.name), (error, stats) => {
         if (error) throw Error;
         console.log(fName + ' - ' + fExt + ' - ' + stats.size + 'b');
       });
