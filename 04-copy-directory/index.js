@@ -8,7 +8,7 @@ fs.readdir(__dirname, (error) => {
   fs.rm(copyDir, { recursive: true, force: true }, (error) => {
     if (error) throw error;
     fs.mkdir(copyDir, { recursive: true }, (error) => {
-      if (error) throw Error;
+      if (error) throw error;
     });
     fs.readdir(origFolder, (err, files) => {
       if (err) throw err;
